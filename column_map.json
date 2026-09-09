@@ -1,0 +1,23 @@
+{
+  "columns": {
+    "product_code": ["Código", "Codigo", "Código do produto"],
+    "product_name": ["Designação", "Designacao", "Produto"],
+    "stock_total": ["Stk. Tot", "Stock Total"],
+    "stock_local": ["Stk. Loc", "Stock Local"],
+    "retail_price": ["P.V.P.", "Preço Venda", "Preco Venda"],
+    "sales_value": ["V. Vendas", "Vendas"],
+    "unit_cost": ["P.Custo", "Preço Custo", "Preco Custo"],
+    "units_sold_total": ["TUnd", "Total Unidades"],
+    "margin": ["MG %", "Margem", "Margem Bruta"]
+  },
+  "month_columns": {
+    "base_names": ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"],
+    "suffix_separator": "_2"
+  },
+  "recommendation": {
+    "service_level_z": 1.65,
+    "months_to_cover": 2.0,
+    "recent_months": 3,
+    "minimum_months_required": 3
+  }
+}
