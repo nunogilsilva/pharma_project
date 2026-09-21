@@ -9,7 +9,7 @@ from typing import Union
 import pandas as pd
 
 
-DEFAULT_INPUT = Path(__file__).parent / "files" / "labs_stock" / "atral_setembro.xls"
+DEFAULT_INPUT = Path(__file__).parent / "files" / "labs_stock" / "cooprofar.xls"
 HEADER_HINTS = ("produto", "designação", "stk. tot", "stk. loc", "v. vendas")
 
 

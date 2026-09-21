@@ -24,6 +24,29 @@ DEZ - December
 TUnd - Total Units
 # Stock analysis
 
+## Offline desktop application
+
+The graphical application runs locally on macOS and Windows. It does not
+upload files or require a server. The first launch asks you to create a local
+password; subsequent launches require that password.
+
+Install dependencies and launch it with:
+
+```bash
+uv sync
+uv run python pharma_app.py
+```
+
+The application supports:
+
+- converting one or more `.xls`/`.xlsx` reports to CSV;
+- running stock analysis for a selected CSV or Excel report;
+- running top molecule sales for selected molecule CSV files;
+- saving each run in a separate local job folder.
+
+Generated files are stored under the operating system's application-data
+directory in `Pharma Analytics/jobs`.
+
 ## Convert the report
 
 ```bash
