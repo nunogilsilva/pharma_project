@@ -1,0 +1,35 @@
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: pharma
+      POSTGRES_USER: pharma
+      POSTGRES_PASSWORD: pharma
+    ports:
+      - "5432:5432"
+    volumes:
+      - pharma-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pharma -d pharma"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  liquibase:
+    image: liquibase/liquibase:4.31
+    depends_on:
+      postgres:
+        condition: service_healthy
+    working_dir: /liquibase
+    volumes:
+      - ./changelog:/liquibase/changelog:ro
+    command:
+      - --url=jdbc:postgresql://postgres:5432/pharma
+      - --username=pharma
+      - --password=pharma
+      - --changelog-file=changelog/db.changelog-master.yaml
+      - update
+    profiles: ["governance"]
+
+volumes:
+  pharma-postgres-data:

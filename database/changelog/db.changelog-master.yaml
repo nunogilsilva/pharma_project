@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-star-schema
+      author: pharma-project
+      changes:
+        - sqlFile:
+            path: 001-star-schema.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true
