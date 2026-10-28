@@ -13,9 +13,9 @@ import pandas as pd
 
 
 ROOT = Path(__file__).parent
-DEFAULT_CSV = ROOT / "files" / "labs_stock" / "cooprofar.csv"
+DEFAULT_CSV = ROOT / "files" / "labs_stock" / "sandoz_latest.csv"
 DEFAULT_MAP = ROOT / "column_map.json"
-DEFAULT_OUTPUT = ROOT / "files" / "labs_stock" / "analytics_results" / "cooprofar_2_meses.csv"
+DEFAULT_OUTPUT = ROOT / "files" / "labs_stock" / "analytics_results" / "sandoz_latest_1_mes.csv"
 
 
 def load_map(path: Path) -> dict[str, Any]:

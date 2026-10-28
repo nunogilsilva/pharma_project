@@ -16,7 +16,7 @@
   },
   "recommendation": {
     "service_level_z": 1.65,
-    "months_to_cover": 2.0,
+    "months_to_cover": 1.0,
     "recent_months": 3,
     "minimum_months_required": 3
   }
